@@ -1,0 +1,1 @@
+import suma from './modules/tipCalculator.js';
