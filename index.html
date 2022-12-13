@@ -8,18 +8,55 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <header>
-
+  <header id="header" class="header">
+    <h1 class="header__title">Splitter</h1>
   </header>
 
-  <main>
+  <main id="main" class="main">
+    <form action="" class="form">
+      <div class="form__box">
+        <label for="" class="form__container__label">Bill</label>
+        <div class="form__box__inputs">
+          <input 
+            type="number"
+            id="total-bill"
+          >
+        </div>
+      </div>
+
+
+      <div class="form__btns-">
+        <button type="button" class="form__btns__button">5%</button>
+        <button type="button" class="form__btns__button">10%</button>
+        <button type="button" class="form__btns__button">15%</button>
+        <button type="button" class="form__btns__button">20%</button>
+        <button type="button" class="form__btns__button">25%</button>
+        <button type="button" class="form__btns__button">50%</button>
+        <input 
+        class="form__btns__button" 
+        type="text" 
+        placeholder="Custom"
+        >
+      </div>
+      
+      <div class="form__box">
+        <label for="" class="form__box__label">Number of people</label>
+        <div class="form__box__inputs">
+          <input 
+            type="number"
+            id="total-people"
+          >
+        </div>
+      </div>
+    </form>
+
 
   </main>
 
-  <footer>
+  <footer id="footer" class="footer">
 
   </footer>
 
-  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/index.js" type="module"></script>
 </body>
 </html>
