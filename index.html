@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header id="header" class="header">
+    <h1 class="header__title">Splitter</h1>
+  </header>
+
+  <main id="main" class="main">
+    <form action="" class="form" id="main-form">
+      <div class="form__box">
+        <label for="" class="form__container__label">Bill</label>
+        <div class="form__box__inputs">
+          <input 
+            type="number"
+            id="total-bill"
+          >
+        </div>
+      </div>
+
+
+      <div class="form__btns-" id="form-btns">
+        <button type="button" class="form__btns__button" value="0.05">5%</button>
+        <button type="button" class="form__btns__button" value="0.10">10%</button>
+        <button type="button" class="form__btns__button" value="0.15">15%</button>
+        <button type="button" class="form__btns__button" value="0.20">20%</button>
+        <button type="button" class="form__btns__button" value="0.25">25%</button>
+        <button type="button" class="form__btns__button" value="0.50">50%</button>
+        <input 
+        class="form__btns__button" 
+        type="text" 
+        placeholder="Custom"
+        id="custom-tip"
+        >
+      </div>
+      
+      <div class="form__box">
+        <label for="" class="form__box__label">Number of people</label>
+        <div class="form__box__inputs">
+          <input 
+            type="number"
+            id="total-people"          >
+        </div>
+      </div>
+
+      <div>
+        <button type="submit">Calculate</button>
+      </div>
+    </form>
+
+    <section id="result" class="result">
+      <div class="result__tip">
+        <h3>Tip Amount <span>/person</span></h3>
+        <p id="result__tip">$0.00</p>
+      </div>
+
+      <div class="result__total">
+        <h3>Total<span>/person</span></h3>
+        <p id="result__total">$0.00</p>
+      </div>
+
+      <button type="button" class="result__btn">Reset</button>
+
+    </section>
+
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+  </footer>
+
+  <script src="./js/index.js" type="module"></script>
+</body>
+</html>
