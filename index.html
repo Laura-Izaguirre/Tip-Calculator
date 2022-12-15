@@ -13,7 +13,7 @@
   </header>
 
   <main id="main" class="main">
-    <form action="" class="form">
+    <form action="" class="form" id="main-form">
       <div class="form__box">
         <label for="" class="form__container__label">Bill</label>
         <div class="form__box__inputs">
@@ -25,17 +25,18 @@
       </div>
 
 
-      <div class="form__btns-">
-        <button type="button" class="form__btns__button">5%</button>
-        <button type="button" class="form__btns__button">10%</button>
-        <button type="button" class="form__btns__button">15%</button>
-        <button type="button" class="form__btns__button">20%</button>
-        <button type="button" class="form__btns__button">25%</button>
-        <button type="button" class="form__btns__button">50%</button>
+      <div class="form__btns-" id="form-btns">
+        <button type="button" class="form__btns__button" value="0.05">5%</button>
+        <button type="button" class="form__btns__button" value="0.10">10%</button>
+        <button type="button" class="form__btns__button" value="0.15">15%</button>
+        <button type="button" class="form__btns__button" value="0.20">20%</button>
+        <button type="button" class="form__btns__button" value="0.25">25%</button>
+        <button type="button" class="form__btns__button" value="0.50">50%</button>
         <input 
         class="form__btns__button" 
         type="text" 
         placeholder="Custom"
+        id="custom-tip"
         >
       </div>
       
@@ -44,9 +45,12 @@
         <div class="form__box__inputs">
           <input 
             type="number"
-            id="total-people"
-          >
+            id="total-people"          >
         </div>
+      </div>
+
+      <div>
+        <button type="submit">Calculate</button>
       </div>
     </form>
 
@@ -72,6 +76,6 @@
 
   </footer>
 
-  <script src="./assets/js/index.js" type="module"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 </html>
