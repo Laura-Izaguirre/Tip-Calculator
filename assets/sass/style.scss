@@ -1,9 +1,4 @@
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 $generalFont: 'Space Mono', monospace;
 
 $strongCyan: hsl(172, 67%, 45%);
@@ -16,9 +11,13 @@ $veryLightGrayishCyan: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
 $border-radius: 0.2rem;
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $generalFont;
+}
 
 body {
-  font-family: $generalFont;
   background-color: $lightGrayishCyan;
 }
 
