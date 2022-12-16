@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+.header {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 100vw;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .form__box__label {
+  text-transform: capitalize;
+  color: hsl(186deg, 14%, 43%);
+  padding: 1rem 0;
+}
+.main .form__box__inputs {
+  position: relative;
+}
+.main .form__box__inputs__input {
+  width: 90vw;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  text-align: right;
+  background-color: hsl(189deg, 41%, 97%);
+  font-family: "Space Mono", monospace;
+  color: hsl(183deg, 100%, 15%);
+  font-weight: bold;
+}
+.main .form__box__inputs__icon {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.8rem;
+  width: 0.6rem;
+}
+.main .form__btns__row {
+  padding: 0.5rem 0;
+}
+.main .form__btns__row__button {
+  font-family: "Space Mono", monospace;
+  text-align: center;
+  width: 43vw;
+  height: 2rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+.main .form__submit-container__submit {
+  font-family: "Space Mono", monospace;
+  width: 90vw;
+  height: 2rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(172deg, 67%, 45%);
+  text-transform: uppercase;
+}
+.main .result {
+  width: 90vw;
+  background-color: hsl(183deg, 100%, 15%);
+}
+.main .result__item {
+  display: flex;
+  justify-content: space-between;
+}
+.main .result__description {
+  display: flex;
+  flex-direction: column;
+  color: hsl(0deg, 0%, 100%);
+}
+.main .result__person {
+  color: hsl(186deg, 14%, 43%);
+  font-weight: lighter;
+  font-size: 1rem;
+}
+.main .result__final-result {
+  color: hsl(172deg, 67%, 45%);
+  font-weight: 4rem;
+}
+.main .result__reset-btn-container {
+  display: flex;
+  justify-content: center;
+}
+.main .result__reset-btn-container__btn {
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  width: 90%;
+  height: 2rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+
+/*# sourceMappingURL=style.css.map */

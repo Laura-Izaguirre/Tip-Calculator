@@ -6,66 +6,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tip Calculator</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header id="header" class="header">
-    <h1 class="header__title">Splitter</h1>
+    <div class="header__icon-container">
+      <img src="./assets/Images/logo.svg" alt="principal-icon" class="header__icon-container__icon">
+    </div>
   </header>
 
   <main id="main" class="main">
     <form action="" class="form" id="main-form">
       <div class="form__box">
-        <label for="" class="form__container__label">Bill</label>
+        <label for="" class="form__box__label">Bill</label>
         <div class="form__box__inputs">
+          <img src="./assets/Images/icon-dollar.svg" alt="icon-dollar" class="form__box__inputs__icon">
           <input 
             type="number"
             id="total-bill"
+            class="form__box__inputs__input"
           >
         </div>
       </div>
 
 
-      <div class="form__btns-" id="form-btns">
-        <button type="button" class="form__btns__button" value="0.05">5%</button>
-        <button type="button" class="form__btns__button" value="0.10">10%</button>
-        <button type="button" class="form__btns__button" value="0.15">15%</button>
-        <button type="button" class="form__btns__button" value="0.20">20%</button>
-        <button type="button" class="form__btns__button" value="0.25">25%</button>
-        <button type="button" class="form__btns__button" value="0.50">50%</button>
-        <input 
-        class="form__btns__button" 
-        type="text" 
-        placeholder="Custom"
-        id="custom-tip"
-        >
+      <div class="form__btns" id="form-btns">
+        <section>
+          <div class="form__box">
+            <label for="" class="form__box__label">Select tip %</label>
+          </div>
+          <div class="form__btns__row">
+            <button type="button" class="form__btns__row__button" value="0.05">5%</button>
+            <button type="button" class="form__btns__row__button" value="0.10">10%</button>
+          </div>
+          <div>
+            <button type="button" class="form__btns__row__button" value="0.15">15%</button>
+            <button type="button" class="form__btns__row__button" value="0.25">25%</button>
+          </div>
+          <div class="form__btns__row">
+            <button type="button" class="form__btns__row__button" value="0.50">50%</button>
+            <input 
+            class="form__btns__row__button" 
+            type="text" 
+            placeholder="Custom"
+            id="custom-tip"
+            >
+          </div>
+        </section>
       </div>
       
       <div class="form__box">
         <label for="" class="form__box__label">Number of people</label>
         <div class="form__box__inputs">
+          <img src="./assets/Images/icon-person.svg" alt="icon-person" class="form__box__inputs__icon">
           <input 
             type="number"
-            id="total-people"          >
+            id="total-people"   
+            class="form__box__inputs__input"          
+            >
         </div>
       </div>
 
-      <div>
-        <button type="submit">Calculate</button>
+      <div class="form__submit-container">
+        <button type="submit" class="form__submit-container__submit">Calculate</button>
       </div>
     </form>
 
     <section id="result" class="result">
-      <div class="result__tip">
-        <h3>Tip Amount <span>/person</span></h3>
-        <p id="result__tip">$0.00</p>
+      <div class="result__item">
+        <h3 class="result__description">Tip amount <span class="result__person">/person</span></h3>
+        <p id="result__tip" class="result__final-result">$0.00</p>
       </div>
 
-      <div class="result__total">
-        <h3>Total<span>/person</span></h3>
-        <p id="result__total">$0.00</p>
+      <div class="result__item">
+        <h3 class="result__description">Total<span class="result__person">/person</span></h3>
+        <p id="result__total" class="result__final-result">$0.00</p>
       </div>
 
-      <button type="button" class="result__btn">Reset</button>
+      <div class="result__reset-btn-container">
+        <button type="button" class="result__reset-btn-container__btn">Reset</button>
+      </div>
 
     </section>
 
