@@ -1,0 +1,165 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$generalFont: 'Space Mono', monospace;
+
+$strongCyan: hsl(172, 67%, 45%);
+
+$veryDarkCyan: hsl(183, 100%, 15%);
+$darkGrayishCyan: hsl(186, 14%, 43%);
+$grayishCyan: hsl(184, 14%, 56%);
+$lightGrayishCyan: hsl(185, 41%, 84%);
+$veryLightGrayishCyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+$border-radius: 0.2rem;
+
+
+body {
+  font-family: $generalFont;
+  background-color: $lightGrayishCyan;
+}
+
+.header {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__icon-container {
+    &__icon {
+      
+    }
+  }
+}
+
+.main {
+  background-color: $white;
+  width: 100vw;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .form {
+
+    &__box {
+
+      &__label {
+        text-transform: capitalize;
+        color: $darkGrayishCyan;
+        padding: 1rem 0;
+        
+      }
+      
+      &__inputs {
+        position: relative;
+        
+        &__input {
+          width: 90vw; 
+          height: 2.5rem;
+          outline: none;
+          border: none;
+          border-radius: $border-radius;
+          text-align: right;
+          background-color: $veryLightGrayishCyan;
+          font-family: $generalFont;
+          color: $veryDarkCyan;
+          font-weight: bold;
+        }
+        
+        &__icon {
+          position: absolute;
+          left: 0.5rem;
+          top: 0.8rem;
+          width: 0.6rem;          
+          
+        }
+        
+      }
+      
+    }
+    
+    &__btns {
+      
+      &__row {
+        padding: 0.5rem 0;         
+        
+        &__button {
+          font-family: $generalFont;
+          text-align: center;
+          width: 43vw;
+          height: 2rem;
+          border: none;
+          border-radius:$border-radius; 
+        }
+      }
+    }
+    
+    &__submit-container {
+      
+      &__submit {
+        font-family: $generalFont;
+        width: 90vw;
+        height: 2rem;
+        margin: 1rem 0;
+        border: none;
+        border-radius: $border-radius;
+        background-color: $veryDarkCyan;
+        color: $strongCyan;
+        text-transform: uppercase;
+        
+      }
+    }
+  }
+  
+  .result {
+    width: 90vw;
+    background-color: $veryDarkCyan;
+    
+    &__item {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      color: $white;
+    }
+    
+    &__person {
+      color: $darkGrayishCyan;
+      font-weight: lighter;
+      font-size: 1rem;
+    }
+
+    &__final-result {
+      color: $strongCyan;
+      font-weight: 4rem;
+    }
+
+    &__reset-btn-container {
+      display: flex;
+      justify-content: center;
+      
+      &__btn {
+        font-family: $generalFont;
+        text-transform: uppercase;
+        width: 90%;
+        height: 2rem;
+        margin: 1rem 0;
+        border: none;
+        border-radius: $border-radius;
+        background-color: $strongCyan;
+        color: $veryDarkCyan;      
+      }
+    }
+    
+    
+  }
+  
+}
