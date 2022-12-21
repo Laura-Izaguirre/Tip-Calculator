@@ -126,4 +126,12 @@ body {
   color: hsl(183deg, 100%, 15%);
 }
 
+.valid {
+  border: 0.1rem hsl(172deg, 67%, 45%) solid;
+}
+
+.invalid {
+  border: 0.1rem red solid;
+}
+
 /*# sourceMappingURL=style.css.map */
