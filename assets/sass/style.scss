@@ -39,7 +39,8 @@ body {
   }
 }
 
-.main {
+.main 
+{
   width: 100%;
   background-color: $white;
   border-radius: 1rem;
@@ -144,28 +145,33 @@ body {
     background-color: $veryDarkCyan;
     padding: 1rem;
     margin-bottom: 1rem;
-    &__item {
-      display: flex;
-      justify-content: space-between;
 
-    }
-
-    &__description {
-      display: flex;
-      flex-direction: column;
-      color: $white;
-    }
+    &__items-container {
+      &__item {
+        display: flex;
+        justify-content: space-between;
+  
+        &__description {
+          display: flex;
+          flex-direction: column;
+          color: $white;
+        }
+        
+        &__person {
+          color: $darkGrayishCyan;
+          font-weight: lighter;
+          font-size: 1rem;
+        }
     
-    &__person {
-      color: $darkGrayishCyan;
-      font-weight: lighter;
-      font-size: 1rem;
+        &__final-result {
+          color: $strongCyan;
+          font-weight: 4rem;
+        }
+
+      }
+
     }
 
-    &__final-result {
-      color: $strongCyan;
-      font-weight: 4rem;
-    }
 
     &__reset-btn-container {
       display: flex;
@@ -189,10 +195,131 @@ body {
 }
 
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:600px) {
   body {
-    background-color: red;
+    background-color: $lightGrayishCyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .main {
+    width: 60%;
+    height: 65vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .form {
+      width: 47.5%;
+
+      &__box {
+
+        &__label {
+
+        }
+
+        &__inputs {
+
+          &__input {
+            width: 95%;
+
+          }
+
+          &__icon {
+
+          }
+
+        }
+
+      }
+
+      &__btns {
+
+        &__button {
+          width: 30%;
+
+        }
+
+        &__button:nth-child(1),
+        &__button:nth-child(2),
+        &__button:nth-child(4),
+        &__button:nth-child(5)
+         {
+          margin-right: 2%;
+        }
+        
+        .design-button {
+
+        }
+
+        .active {
+
+        }
+      
+        #custom-tip {
+
+        }
+
+      }
+
+      &__submit-container {
+      
+        &__submit {
+          width: 95%;
+        }
+      }
+
+    }
+
+    .result {
+      width: 47.5%;
+      height: 55vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__items-container {
+
+        &__item {
+          display: flex;
+          align-items: center;
+          padding: 1rem;
+    
+          &__description {
+      
+          }
+          
+          &__person {
+      
+          }
+      
+          &__final-result {
+            font-size: 2.5rem;
+      
+          }
+
+        }
+
+      }
+  
+  
+      &__reset-btn-container {
+  
+        
+        &__btn {
+      
+        }
+      }
+      
+      
+    }
+
+
+  }
+
 
 
 }
