@@ -34,10 +34,16 @@ body {
 }
 .main .form__box {
   margin: 0.5rem 0;
+  width: 100%;
 }
 .main .form__box__label {
   text-transform: capitalize;
   color: hsl(186deg, 14%, 43%);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .main .form__box__inputs {
   position: relative;
@@ -66,7 +72,7 @@ body {
 }
 .main .form__btns__button {
   text-align: center;
-  width: 46%;
+  width: 47%;
   height: 2rem;
   margin: 0.3rem 0;
   border: none;
@@ -137,7 +143,7 @@ body {
   color: hsl(183deg, 100%, 15%);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   body {
     background-color: hsl(185deg, 41%, 84%);
     display: flex;
@@ -156,8 +162,15 @@ body {
   .main .form {
     width: 47.5%;
   }
-  .main .form__box__inputs__input {
+  .main .form__box {
+    margin: 0;
     width: 95%;
+  }
+  .main .form__box__label {
+    margin: 1rem 0;
+  }
+  .main .form__box__inputs__input {
+    width: 100%;
   }
   .main .form__btns__button {
     width: 30%;
@@ -187,10 +200,18 @@ body {
 }
 .valid {
   border: 0.1rem hsl(172deg, 67%, 45%) solid;
+  border-radius: 0.2rem;
 }
 
 .invalid {
   border: 0.1rem red solid;
+  border-radius: 0.2rem;
+}
+
+.not-valid {
+  font-size: 0.55rem;
+  color: red;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

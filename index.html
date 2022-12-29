@@ -15,6 +15,7 @@
     />
   </head>
   <body>
+
     <header id="header" class="header">
       <div class="header__icon-container">
         <img
@@ -26,31 +27,42 @@
     </header>
 
     <main id="main" class="main">
+
       <form action="" class="form" id="main-form">
+
         <div class="form__box">
+
           <label for="" class="form__box__label"
-            >Bill <span id="not-valid1"></span
-          ></label>
+            >Bill <span id="not-valid1" class="not-valid"></span>
+          </label>
+
           <div class="form__box__inputs">
+
             <img
               src="./assets/Images/icon-dollar.svg"
               alt="icon-dollar"
               class="form__box__inputs__icon"
             />
+
             <input
               type="number"
               id="total-bill"
               class="form__box__inputs__input"
               required
             />
+
           </div>
+
         </div>
         
         <div class="form__box">
+
           <label for="" class="form__box__label"
-            >Select tip % <span id="not-valid3"></span
+            >Select tip % <span id="not-valid3" class="not-valid"></span
           ></label>
+
         </div>
+
         <div class="form__btns" id="form-btns">
           
               <button
@@ -60,6 +72,7 @@
               >
                 5%
               </button>
+
               <button
                 type="button"
                 class="form__btns__button design-button"
@@ -75,6 +88,7 @@
               >
                 15%
               </button>
+
               <button
                 type="button"
                 class="form__btns__button design-button"
@@ -90,41 +104,53 @@
               >
                 50%
               </button>
+
               <input
                 class="form__btns__button"
                 type="text"
                 placeholder="Custom"
                 id="custom-tip"
               />
+
         </div>
+
         <div class="form__box">
+
           <label for="" class="form__box__label"
-            >Number of people <span id="not-valid2"></span
-          ></label>
+            >Number of people <span id="not-valid2" class="not-valid"></span>
+          </label>
+
           <div class="form__box__inputs">
+
             <img
               src="./assets/Images/icon-person.svg"
               alt="icon-person"
               class="form__box__inputs__icon"
             />
+
             <input
               type="number"
               id="total-people"
               class="form__box__inputs__input"
               required
             />
+
           </div>
         </div>
 
         <div class="form__submit-container">
+
           <button type="submit" class="form__submit-container__submit">
             Calculate
           </button>
+
         </div>
       </form>
 
       <section id="result" class="result">
+
         <div class="result__items-container">
+
           <div class="result__items-container__item">
             <h3 class="result__items-container__item__description">
               Tip amount <span class="result__items-container__item__person">/person</span>
@@ -138,9 +164,11 @@
             </h3>
             <p id="result-total" class="result__items-container__item__final-result">$0.00</p>
           </div>
+
         </div>
 
         <div class="result__reset-btn-container">
+
           <button
             type="button"
             class="result__reset-btn-container__btn"
@@ -148,8 +176,10 @@
           >
             Reset
           </button>
+
         </div>
       </section>
+
     </main>
 
     <footer id="footer" class="footer"></footer>
