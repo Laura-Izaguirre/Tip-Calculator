@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   font-family: "Space Mono", monospace;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
 
 body {
@@ -9,20 +13,24 @@ body {
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
   height: 15vh;
+  padding: 4rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .main {
+  width: 100%;
   background-color: hsl(0deg, 0%, 100%);
-  width: 100vw;
-  height: 85vh;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
+}
+.main .form {
+  width: 90%;
 }
 .main .form__box {
   margin: 0.5rem 0;
@@ -36,14 +44,13 @@ body {
   margin: 1rem 0;
 }
 .main .form__box__inputs__input {
-  width: 90vw;
+  width: 100%;
   height: 2.5rem;
   outline: none;
   border: none;
   border-radius: 0.2rem;
   text-align: right;
   background-color: hsl(189deg, 41%, 97%);
-  font-family: "Space Mono", monospace;
   color: hsl(183deg, 100%, 15%);
   font-weight: bold;
 }
@@ -53,33 +60,36 @@ body {
   top: 0.8rem;
   width: 0.6rem;
 }
-.main .form__btns__row {
-  padding: 0.5rem 0;
+.main .form__btns {
+  display: flex;
+  flex-wrap: wrap;
 }
-.main .form__btns__row__button {
-  font-family: "Space Mono", monospace;
+.main .form__btns__button {
   text-align: center;
-  width: 43vw;
+  width: 46%;
   height: 2rem;
+  margin: 0.3rem 0;
   border: none;
   border-radius: 0.2rem;
 }
-.main .form__btns__row .design-button {
+.main .form__btns__button:nth-child(odd) {
+  margin-right: 6%;
+}
+.main .form__btns .design-button {
   background-color: hsl(183deg, 100%, 15%);
   color: hsl(0deg, 0%, 100%);
 }
-.main .form__btns__row .active {
+.main .form__btns .active {
   background-color: hsl(172deg, 67%, 45%);
   color: hsl(183deg, 100%, 15%);
 }
-.main .form__btns__row #custom-tip {
+.main .form__btns #custom-tip {
   outline: none;
 }
 .main .form__submit-container__submit {
-  font-family: "Space Mono", monospace;
-  width: 90vw;
+  width: 100%;
   height: 2rem;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   border: none;
   border-radius: 0.2rem;
   background-color: hsl(183deg, 100%, 15%);
@@ -87,10 +97,11 @@ body {
   text-transform: uppercase;
 }
 .main .result {
-  width: 82.5vw;
+  width: 90%;
   border-radius: 1rem;
   background-color: hsl(183deg, 100%, 15%);
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 .main .result__item {
   display: flex;
@@ -126,6 +137,11 @@ body {
   color: hsl(183deg, 100%, 15%);
 }
 
+@media screen and (min-width: 900px) {
+  body {
+    background-color: red;
+  }
+}
 .valid {
   border: 0.1rem hsl(172deg, 67%, 45%) solid;
 }

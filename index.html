@@ -45,64 +45,58 @@
             />
           </div>
         </div>
-
+        
+        <div class="form__box">
+          <label for="" class="form__box__label"
+            >Select tip % <span id="not-valid3"></span
+          ></label>
+        </div>
         <div class="form__btns" id="form-btns">
-          <section class="form__box__container">
-            <div class="form__box">
-              <label for="" class="form__box__label"
-                >Select tip % <span id="not-valid3"></span
-              ></label>
-            </div>
-            <div class="form__btns__row">
+          
               <button
                 type="button"
-                class="form__btns__row__button design-button"
+                class="form__btns__button design-button"
                 value="0.05"
               >
                 5%
               </button>
               <button
                 type="button"
-                class="form__btns__row__button design-button"
+                class="form__btns__button design-button"
                 value="0.10"
               >
                 10%
               </button>
-            </div>
-            <div class="form__btns__row">
+
               <button
                 type="button"
-                class="form__btns__row__button design-button"
+                class="form__btns__button design-button"
                 value="0.15"
               >
                 15%
               </button>
               <button
                 type="button"
-                class="form__btns__row__button design-button"
+                class="form__btns__button design-button"
                 value="0.25"
               >
                 25%
               </button>
-            </div>
-            <div class="form__btns__row">
+
               <button
                 type="button"
-                class="form__btns__row__button design-button"
+                class="form__btns__button design-button"
                 value="0.50"
               >
                 50%
               </button>
               <input
-                class="form__btns__row__button"
+                class="form__btns__button"
                 type="text"
                 placeholder="Custom"
                 id="custom-tip"
               />
-            </div>
-          </section>
         </div>
-
         <div class="form__box">
           <label for="" class="form__box__label"
             >Number of people <span id="not-valid2"></span
@@ -134,14 +128,14 @@
           <h3 class="result__description">
             Tip amount <span class="result__person">/person</span>
           </h3>
-          <p id="result-tip" class="result__final-result">$0.00</p>
+          <p id="result-tip" class="result__final-result"></p>
         </div>
 
         <div class="result__item">
           <h3 class="result__description">
             Total<span class="result__person">/person</span>
           </h3>
-          <p id="result-total" class="result__final-result">$0.00</p>
+          <p id="result-total" class="result__final-result"></p>
         </div>
 
         <div class="result__reset-btn-container">

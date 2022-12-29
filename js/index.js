@@ -19,7 +19,7 @@ let porcentDiv = document.getElementById("form-btns");
 let personas = document.getElementById("total-people");
 
 // Metodo para seleccionar todos los botones
-const btns = document.querySelectorAll(".form__btns__row__button");
+const btns = document.querySelectorAll(".form__btns__button");
 const resetBtn = document.getElementById("reset-btn");
 
 // Elemento para almacenar texto del invalid
@@ -39,7 +39,7 @@ porcentDiv.addEventListener("click", (e) => {
     btns[i].classList.remove("active");
   }
 
-  if (e.target.classList.contains("form__btns__row__button")) {
+  if (e.target.classList.contains("form__btns__button")) {
     checkBtn = true;
   }
 
@@ -95,6 +95,8 @@ function updateDOM(subtotalF, porcentTipF, personasF) {
   // Llamar a las funciones que actualizan el DOM
   updateTip(tipFinal.toFixed(2), tipResult);
   updateTotal(totalF.toFixed(2), totalResult);
+  console.log(tipFinal);
+  console.log(totalF);
 }
 
 // Funcion para quitar los mensajes en un periodo de tiempo
