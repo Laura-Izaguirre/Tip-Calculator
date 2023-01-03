@@ -1,45 +1,62 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Space Mono", monospace;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
 
 body {
-  font-family: "Space Mono", monospace;
   background-color: hsl(185deg, 41%, 84%);
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
   height: 15vh;
+  padding: 4rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .main {
+  width: 100%;
   background-color: hsl(0deg, 0%, 100%);
-  width: 100vw;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
+}
+.main .form {
+  width: 90%;
+}
+.main .form__box {
+  margin: 0.5rem 0;
+  width: 100%;
 }
 .main .form__box__label {
   text-transform: capitalize;
   color: hsl(186deg, 14%, 43%);
-  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .main .form__box__inputs {
   position: relative;
+  margin: 1rem 0;
 }
 .main .form__box__inputs__input {
-  width: 90vw;
+  width: 100%;
   height: 2.5rem;
   outline: none;
   border: none;
   border-radius: 0.2rem;
   text-align: right;
   background-color: hsl(189deg, 41%, 97%);
-  font-family: "Space Mono", monospace;
   color: hsl(183deg, 100%, 15%);
   font-weight: bold;
 }
@@ -49,22 +66,36 @@ body {
   top: 0.8rem;
   width: 0.6rem;
 }
-.main .form__btns__row {
-  padding: 0.5rem 0;
+.main .form__btns {
+  display: flex;
+  flex-wrap: wrap;
 }
-.main .form__btns__row__button {
-  font-family: "Space Mono", monospace;
+.main .form__btns__button {
   text-align: center;
-  width: 43vw;
+  width: 47%;
   height: 2rem;
+  margin: 0.3rem 0;
   border: none;
   border-radius: 0.2rem;
 }
+.main .form__btns__button:nth-child(odd) {
+  margin-right: 6%;
+}
+.main .form__btns .design-button {
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+}
+.main .form__btns .active {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+.main .form__btns #custom-tip {
+  outline: none;
+}
 .main .form__submit-container__submit {
-  font-family: "Space Mono", monospace;
-  width: 90vw;
+  width: 100%;
   height: 2rem;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   border: none;
   border-radius: 0.2rem;
   background-color: hsl(183deg, 100%, 15%);
@@ -72,24 +103,27 @@ body {
   text-transform: uppercase;
 }
 .main .result {
-  width: 90vw;
+  width: 90%;
+  border-radius: 1rem;
   background-color: hsl(183deg, 100%, 15%);
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
-.main .result__item {
+.main .result__items-container__item {
   display: flex;
   justify-content: space-between;
 }
-.main .result__description {
+.main .result__items-container__item__description {
   display: flex;
   flex-direction: column;
   color: hsl(0deg, 0%, 100%);
 }
-.main .result__person {
+.main .result__items-container__item__person {
   color: hsl(186deg, 14%, 43%);
   font-weight: lighter;
   font-size: 1rem;
 }
-.main .result__final-result {
+.main .result__items-container__item__final-result {
   color: hsl(172deg, 67%, 45%);
   font-weight: 4rem;
 }
@@ -107,6 +141,77 @@ body {
   border-radius: 0.2rem;
   background-color: hsl(172deg, 67%, 45%);
   color: hsl(183deg, 100%, 15%);
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-color: hsl(185deg, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main {
+    width: 60%;
+    height: 65vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main .form {
+    width: 47.5%;
+  }
+  .main .form__box {
+    margin: 0;
+    width: 95%;
+  }
+  .main .form__box__label {
+    margin: 1rem 0;
+  }
+  .main .form__box__inputs__input {
+    width: 100%;
+  }
+  .main .form__btns__button {
+    width: 30%;
+  }
+  .main .form__btns__button:nth-child(1), .main .form__btns__button:nth-child(2), .main .form__btns__button:nth-child(4), .main .form__btns__button:nth-child(5) {
+    margin-right: 2%;
+  }
+  .main .form__submit-container__submit {
+    width: 95%;
+  }
+  .main .result {
+    width: 47.5%;
+    height: 55vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .main .result__items-container__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  .main .result__items-container__item__final-result {
+    font-size: 2.5rem;
+  }
+}
+.valid {
+  border: 0.1rem hsl(172deg, 67%, 45%) solid;
+  border-radius: 0.2rem;
+}
+
+.invalid {
+  border: 0.1rem red solid;
+  border-radius: 0.2rem;
+}
+
+.not-valid {
+  font-size: 0.55rem;
+  color: red;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
